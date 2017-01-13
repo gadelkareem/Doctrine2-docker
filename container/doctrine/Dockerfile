@@ -11,3 +11,4 @@ RUN chmod +x /start.sh
 
 CMD [ "/start.sh" ]
 
+ENTRYPOINT /bin/bash

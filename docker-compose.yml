@@ -25,3 +25,4 @@ doctrine:
     - ./doctrine2:/var/www/application
   stdin_open: true
   tty: true
+
