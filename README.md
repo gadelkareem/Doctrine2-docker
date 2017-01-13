@@ -1,5 +1,5 @@
 Doctrine2-docker
 ================
 
-Docker containers for Doctrine2 testing
+Docker containers for Doctrine2 Testsuite
 

@@ -10,7 +10,7 @@ trap finish SIGTERM SIGKILL
 start_ts=$(date +%s)
 while :
     do
-        (is_dir /var/www/application) >/dev/null 2>&1
+        (test -f /var/www/application/composer.json) >/dev/null 2>&1
         result=$?
         end_ts=$(date +%s)
         if [[ $result -eq 0 ]]; then
