@@ -21,6 +21,11 @@ doctrine:
   links:
     - mysql
     - gearman
+  environment:
+    MYSQL_USER: gearman
+    MYSQL_PASSWORD: balalam
+    GEARMAN_HOST: gearman
+    GEARMAN_PORT: 4730
   volumes:
     - ./doctrine2:/var/www/application
   stdin_open: true

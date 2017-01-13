@@ -23,4 +23,4 @@ while :
 
 echo "Running composer"
 
-exec composer.phar install
+exec composer.phar update
