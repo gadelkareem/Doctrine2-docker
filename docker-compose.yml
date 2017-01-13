@@ -1,0 +1,27 @@
+mysql:
+  image: mysql
+  environment:
+    MYSQL_USER: gearman
+    MYSQL_PASSWORD: balalam
+    MYSQL_ROOT_PASSWORD: balalam
+    MYSQL_DATABASE: gearman
+gearman:
+  build: ./container/gearman
+  ports:
+    - "4730:4730"
+  links:
+    - mysql
+  environment:
+    MYSQL_USER: gearman
+    MYSQL_PASSWORD: balalam
+    MYSQL_HOST: mysql
+    MYSQL_DB: gearman
+doctrine:
+  build: ./container/doctrine
+  links:
+    - mysql
+    - gearman
+  volumes:
+    - ./doctrine2:/var/www/application
+  stdin_open: true
+  tty: true
