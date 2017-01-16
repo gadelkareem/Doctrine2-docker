@@ -1,5 +1,5 @@
 mysql:
-  image: mysql
+  image: mysql:5.6
   environment:
     MYSQL_USER: gearman
     MYSQL_PASSWORD: balalam
