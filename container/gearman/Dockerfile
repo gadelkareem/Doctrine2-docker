@@ -8,8 +8,8 @@ RUN apt-get update \
 RUN mkdir -p /opt/gearman && chown gearman /opt/gearman
 
 WORKDIR /opt/gearman
+
 ADD ./start.sh /start.sh
 RUN chmod +x /start.sh
-
 CMD [ "/start.sh" ]
 

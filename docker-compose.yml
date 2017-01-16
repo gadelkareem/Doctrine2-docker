@@ -22,10 +22,11 @@ doctrine:
     - mysql
     - gearman
   environment:
-    MYSQL_USER: gearman
+    MYSQL_USER: doctrine_tests
     MYSQL_PASSWORD: balalam
     GEARMAN_HOST: gearman
     GEARMAN_PORT: 4730
+    MYSQL_HOST: mysql
   volumes:
     - ./doctrine2:/var/www/application
   stdin_open: true
